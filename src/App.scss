@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$WindowBarColor : #0047AB;
+$WindowTextColor : #6495ED;
+$BackgroundColor :#B3C0FF;
+
+.App {
+    text-align: center;
+    padding: 20px;
+}
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: $BackgroundColor;
+    height: 100%;
+}
+
+textarea {
+    background-color: $WindowTextColor;
+    outline: 0;
+    border: none;
+    width: 98.5% !important;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+.instuctionsDiv {
+    position: absolute;
+    right: 4%;
+    text-align: right;
+
+    button {
+        border-radius: 10px;
+        padding: 10px;
+        border-width: 0px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        background-color: $WindowBarColor;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .instructionsButton {
+        border-radius: 10px;
+        padding: 10px;
+        border-width: 0px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        font-size: 16px;
+    }
+
+    .DefaultValueDiv {
+        text-align: center;
+        button {
+            font-size: 12px;
+            margin: 9px;
+            cursor:pointer;
+        }
+    }
+
+    .instructionsContext {
+        background-color: white;
+        padding: 10px 30px;
+        text-align: left;
+        border-radius: 5px;
+
+        li {
+            margin: 4px;
+        }
+
+        strong {
+            color: #0047AB;
+        }
+    }
+}
+
+.Bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: $WindowBarColor;
+    padding: 5px;
+
+    h3 {
+        background-color: #0047AB;
+    }
+
+    i {
+        margin: 5px;
+        cursor: pointer;
+    }
+}
+
+#editorWrap {
+    margin: 0 auto;
+    max-width: 560px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    textarea {
+        font-size: 16px;
+        resize: vertical;
+        padding: 5px;
+    }
+}
+
+#PreviewWrap {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 20px !important;
+    margin: 0 auto;
+    max-width: 780px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    #preview {
+        background-color: $WindowTextColor;
+        max-width: 100%;
+        text-align: left;
+        padding: 20px;
+        min-height: 200px;
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        pre,
+        code {
+            background-color: white;
+            padding: 3px;
+            border-radius: 5px;
+            font-weight: bold;
+
+            .comment {
+                color: grey;
+            }
+
+            .keyword {
+                color: rgba(0, 132, 255, 0.788)
+            }
+
+            .function {
+                color: rgb(255, 30, 0)
+            }
+
+            .punctuation,
+            .parameter {
+                opacity: 0.9;
+            }
+        }
+
+        blockquote {
+            padding: 5px 10px;
+
+            p {
+                border-left: 3px solid rgb(65, 64, 64);
+                padding: 2px 5px;
+            }
+        }
+
+        table {
+            border-collapse: collapse;
+
+            td,
+            th {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 2px;
+            }
+        }
+
+        li,
+        ul {
+            margin: 10px 0px 10px 15px;
+        }
+
+        ol {
+            margin: 20px 15px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
